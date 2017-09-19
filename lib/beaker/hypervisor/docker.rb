@@ -78,7 +78,8 @@ module Beaker
             'Privileged' => true,
             'RestartPolicy' => {
               'Name' => 'always'
-            }
+            },
+            'UsernsMode' => 'host',
           }
         }
         container = find_container(host)
